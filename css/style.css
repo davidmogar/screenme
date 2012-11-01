@@ -8,7 +8,7 @@ html, body {
 }
 
 #wrapper {
-  background-color: #333;
+  background-color: #094AB2;
   bottom: 0;
   left: 0;
   position: absolute;
@@ -16,7 +16,21 @@ html, body {
   top: 0;
 }
 
-#slides_pane {
+#options_panel {
+  background-color: #2E8DEF;
+  bottom: 0;
+  position: absolute;
+  right: -350px;
+  top: 0;
+  width: 350px;
+  z-index: 9999;
+}
+
+.show_options {
+  right: 0;
+}
+
+#slides_panel {
   height: 480px;
   left: 0;
   position: fixed;
@@ -24,12 +38,12 @@ html, body {
   width: 640px;
 }
 
-#slides_pane iframe {
+#slides_panel iframe {
   height: 100%;
   width: 100%;
 }
 
-#webcam_pane {
+#webcam_panel {
   bottom: 0;
   height: 240px;
   position: fixed;

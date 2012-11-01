@@ -9,7 +9,8 @@ Last changes
 * Added drag&drop support.
 * Webcams are handled by HTML5 (Getusermedia).
 
-### Next
+Next
+----
 * Webcam fallback to flash.
 * Small textarea to show text (Yes, I know. That was obvious ^^).
 * Options panel to select slideshare presentations (The slide is hardcoded in current version).

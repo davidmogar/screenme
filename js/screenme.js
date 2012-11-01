@@ -5,77 +5,8 @@
  */
 
 $(document).ready(function () {
-  $("#slides_pane").resizable({
-    containment: "#wrapper",
-    grid: 1,
-    start: function(){
-      iframe = $('iframe');
-      var div = $('<div></div>');
+  initUI();
+  initUserMedia();
 
-      $('#slides_pane').append(div[0]);
-      div[0].id = 'temp_div';
-      div.css({position:'absolute'});
-      div.css({top: iframe.position().top, left:0});
-      div.height(iframe.height());
-      div.width('100%');
-    },
-    stop: function(){
-      $('#temp_div').remove();
-    }
-  });
-  $("#slides_pane").draggable({
-    containment: "#wrapper",
-    scroll: false,
-    snap: true,
-    snapMode: "corner"
-  });
-
-  $("#webcam_pane").resizable({
-    aspectRatio: 4/3,
-    containment: "#wrapper",
-    grid: 1
-  });
-  $("#webcam_pane").draggable({
-    containment: "#wrapper",
-    scroll: false,
-    snap: true,
-    snapMode: "corner"
-  });
-
-  loadUserMedia();
-  loadSlideshare('7292569');
+  loadSlideshare("8642326");
 });
-
-var onUserMediaError = function(e) {
-    console.log('User media error', e);
-}
-
-function loadUserMedia() {
-  if (navigator.getUserMedia) {                       
-    navigator.getUserMedia({video: true, audio: true},
-        function(localMediaStream) {
-      var video = $("video#webcam");
-      video.attr('src', window.URL.createObjectURL(localMediaStream));
-    }, onUserMediaError); 
-  } else {                                                                                                 alert('Your browser is not supported.'); 
-  }
-}
-
-function loadSlideshare(embedCode) {
-  var src = 'http://www.slideshare.net/slideshow/embed_code/' + embedCode; 
-  $("#slides_panel").append(
-    '<iframe src="' + src + '""></iframe>'
-  );
-}
-
-function showOptions() {
-  $('#options_panel').animate({
-    right: '-80px'
-  }, 'slow');
-}
-
-window.URL = window.URL || window.webkitURL;
-navigator.getUserMedia = navigator.getUserMedia ||
-    navigator.webkitGetUserMedia ||
-    navigator.mozGetUserMedia ||
-    navigator.msGetUserMedia;

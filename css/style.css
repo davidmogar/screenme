@@ -1,0 +1,48 @@
+@import "reset.css";
+
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+#wrapper {
+  background-color: #333;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+#webcam {
+  bottom: 0;
+  height: 240px;
+  position: fixed;
+  right: 0;
+  width: 320px;
+}
+
+#webcam video {
+  height: auto !important;
+  width: 100% !important;
+}
+
+.ui-icon, .ui-resizable-s, .ui-resizable-e, .ui-icon-gripsmall-diagonal-se {
+  display: none;
+}
+
+.ui-resizable-se {
+  background: transparent url('../images/resize.gif') no-repeat bottom right;
+  bottom: 0;
+  height: 12px;
+  margin: 2px;
+  position: absolute;
+  right: 0;
+  width: 12px;
+}
+
+.ui-resizable-helper {
+  outline: 1px auto gray;
+}

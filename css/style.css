@@ -1,12 +1,76 @@
+/*
+Master stylesheet
+
+Project: Screen me!
+Version: 1.0
+Last change: 11/29/2012
+*/
+
 @import "reset.css";
 
+/*
+Table of Contents
+
+1. Body
+2. Positioning classes / .fixed{Bottom | Top}{Left | Rigth}
+3. Wrapper / #wrapper
+4. Slides panel / #slides_panel
+5. Webcam panel / #webcam_panel
+6. Jquery UI resizable classes / Mainly .ui-resizable-se
+*/
+
+/*
+Color codes
+
+Background:       #094AB2 (blue)
+Text:             #333    (dark black)
+*/
+
+/*
+Typography
+*/
+
+/*
+1. Body
+*/
 html, body {
+  color: #333;
   height: 100%;
   margin: 0;
   overflow: hidden;
   padding: 0;
 }
 
+/*
+2. Positioning classes / .fixed{Bottom | Top}{Left | Rigth}
+*/
+.fixedBottomLeft {
+  bottom: 20px;
+  left: 0;
+  position: fixed;
+}
+
+.fixedBottomRight {
+  bottom: 0;
+  position: fixed;
+  right: 0
+}
+
+.fixedTopLeft {
+  left: 0;
+  position: fixed;
+  top: 0;
+}
+
+.fixedTopRight {
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+/*
+3. Wrapper / #wrapper
+*/
 #wrapper {
   background-color: #094AB2;
   bottom: 0;
@@ -16,13 +80,13 @@ html, body {
   top: 0;
 }
 
+/*
+4. Slides panel / #slides_panel
+*/
 #slides_panel {
   height: 480px;
-  left: 0;
-  position: fixed;
-  top: 0;
   width: 640px;
-  z-index: 1002;
+  z-index: 1001;
 }
 
 #slides_panel iframe {
@@ -30,11 +94,11 @@ html, body {
   width: 100%;
 }
 
+/*
+5. Webcam panel / #webcam_panel
+*/
 #webcam_panel {
-  bottom: 0;
   height: 240px;
-  position: fixed;
-  right: 0;
   width: 320px;
   z-index: 1003;
 }
@@ -44,6 +108,9 @@ video#webcam {
   width: 100% !important;
 }
 
+/*
+6. Jquery UI resizable classes / Mainly .ui-resizable-se
+*/
 .ui-icon, .ui-resizable-s, .ui-resizable-e, .ui-icon-gripsmall-diagonal-se {
   display: none;
 }

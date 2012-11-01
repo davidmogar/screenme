@@ -26,8 +26,8 @@ $(document).ready(function () {
   $("#slides_pane").draggable({
     containment: "#wrapper",
     scroll: false,
-    snap: "#wrapper",
-    snapMode: "inner"
+    snap: "true,
+    snapMode: "corner"
   });
 
   $("#webcam_pane").resizable({
@@ -38,8 +38,8 @@ $(document).ready(function () {
   $("#webcam_pane").draggable({
     containment: "#wrapper",
     scroll: false,
-    snap: "#wrapper",
-    snapMode: "inner"
+    snap: true,
+    snapMode: "corner"
   });
 
   loadUserMedia();

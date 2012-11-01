@@ -16,7 +16,20 @@ html, body {
   top: 0;
 }
 
-#webcam {
+#slides_pane {
+  height: 480px;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 640px;
+}
+
+#slides_pane iframe {
+  height: 100%;
+  width: 100%;
+}
+
+#webcam_pane {
   bottom: 0;
   height: 240px;
   position: fixed;
@@ -24,7 +37,7 @@ html, body {
   width: 320px;
 }
 
-#webcam video {
+video#webcam {
   height: auto !important;
   width: 100% !important;
 }

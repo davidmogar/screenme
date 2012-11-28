@@ -26,7 +26,7 @@ $(document).ready(function () {
   $("#slides_pane").draggable({
     containment: "#wrapper",
     scroll: false,
-    snap: "true,
+    snap: true,
     snapMode: "corner"
   });
 
